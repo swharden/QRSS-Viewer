@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRSS-Viewer", "QRSS-Viewer\QRSS-Viewer.csproj", "{AAF324B9-5315-402C-915F-FE37BD936DEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spectrogram", "..\..\Spectrogram\src\Spectrogram\Spectrogram.csproj", "{73448B2A-7BC4-4E0B-82D8-4B9D146FBF94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAF324B9-5315-402C-915F-FE37BD936DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF324B9-5315-402C-915F-FE37BD936DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF324B9-5315-402C-915F-FE37BD936DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF324B9-5315-402C-915F-FE37BD936DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73448B2A-7BC4-4E0B-82D8-4B9D146FBF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73448B2A-7BC4-4E0B-82D8-4B9D146FBF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73448B2A-7BC4-4E0B-82D8-4B9D146FBF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73448B2A-7BC4-4E0B-82D8-4B9D146FBF94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3F80732-0445-48F8-B5DC-636DD349653F}
+	EndGlobalSection
+EndGlobal
