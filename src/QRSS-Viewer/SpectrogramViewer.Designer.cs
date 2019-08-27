@@ -34,10 +34,25 @@
             this.panelSpec = new System.Windows.Forms.Panel();
             this.panelLevel = new System.Windows.Forms.Panel();
             this.pbLevelMask = new System.Windows.Forms.PictureBox();
+            this.rightClickMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.brightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frequencyRangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioDeviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fFTSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showTicksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colormapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.viridisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grayscaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greensToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bluesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbSpec)).BeginInit();
             this.panelSpec.SuspendLayout();
             this.panelLevel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLevelMask)).BeginInit();
+            this.rightClickMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbSpec
@@ -90,10 +105,118 @@
             this.pbLevelMask.TabIndex = 0;
             this.pbLevelMask.TabStop = false;
             // 
+            // rightClickMenu
+            // 
+            this.rightClickMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.audioDeviceToolStripMenuItem,
+            this.fFTSettingsToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.frequencyRangeToolStripMenuItem,
+            this.brightnessToolStripMenuItem,
+            this.colormapToolStripMenuItem,
+            this.showTicksToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.aboutToolStripMenuItem});
+            this.rightClickMenu.Name = "rightClickMenu";
+            this.rightClickMenu.Size = new System.Drawing.Size(181, 192);
+            this.rightClickMenu.Opening += new System.ComponentModel.CancelEventHandler(this.RightClickMenu_Opening);
+            // 
+            // brightnessToolStripMenuItem
+            // 
+            this.brightnessToolStripMenuItem.Name = "brightnessToolStripMenuItem";
+            this.brightnessToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.brightnessToolStripMenuItem.Text = "Brightness";
+            this.brightnessToolStripMenuItem.Click += new System.EventHandler(this.BrightnessToolStripMenuItem_Click);
+            // 
+            // frequencyRangeToolStripMenuItem
+            // 
+            this.frequencyRangeToolStripMenuItem.Name = "frequencyRangeToolStripMenuItem";
+            this.frequencyRangeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.frequencyRangeToolStripMenuItem.Text = "Frequency Range";
+            this.frequencyRangeToolStripMenuItem.Click += new System.EventHandler(this.FrequencyRangeToolStripMenuItem_Click);
+            // 
+            // audioDeviceToolStripMenuItem
+            // 
+            this.audioDeviceToolStripMenuItem.Name = "audioDeviceToolStripMenuItem";
+            this.audioDeviceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.audioDeviceToolStripMenuItem.Text = "Audio Device";
+            this.audioDeviceToolStripMenuItem.Click += new System.EventHandler(this.AudioDeviceToolStripMenuItem_Click);
+            // 
+            // fFTSettingsToolStripMenuItem
+            // 
+            this.fFTSettingsToolStripMenuItem.Name = "fFTSettingsToolStripMenuItem";
+            this.fFTSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fFTSettingsToolStripMenuItem.Text = "FFT Settings";
+            this.fFTSettingsToolStripMenuItem.Click += new System.EventHandler(this.FFTSettingsToolStripMenuItem_Click);
+            // 
+            // showTicksToolStripMenuItem
+            // 
+            this.showTicksToolStripMenuItem.Name = "showTicksToolStripMenuItem";
+            this.showTicksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showTicksToolStripMenuItem.Text = "Show Ticks";
+            this.showTicksToolStripMenuItem.Click += new System.EventHandler(this.ShowTicksToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
+            // 
+            // colormapToolStripMenuItem
+            // 
+            this.colormapToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viridisToolStripMenuItem,
+            this.grayscaleToolStripMenuItem,
+            this.greensToolStripMenuItem,
+            this.bluesToolStripMenuItem});
+            this.colormapToolStripMenuItem.Name = "colormapToolStripMenuItem";
+            this.colormapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colormapToolStripMenuItem.Text = "Colormap";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // viridisToolStripMenuItem
+            // 
+            this.viridisToolStripMenuItem.Name = "viridisToolStripMenuItem";
+            this.viridisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viridisToolStripMenuItem.Text = "Viridis";
+            this.viridisToolStripMenuItem.Click += new System.EventHandler(this.ViridisToolStripMenuItem_Click);
+            // 
+            // grayscaleToolStripMenuItem
+            // 
+            this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
+            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grayscaleToolStripMenuItem.Text = "Grayscale";
+            this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.GrayscaleToolStripMenuItem_Click);
+            // 
+            // greensToolStripMenuItem
+            // 
+            this.greensToolStripMenuItem.Name = "greensToolStripMenuItem";
+            this.greensToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.greensToolStripMenuItem.Text = "Greens";
+            this.greensToolStripMenuItem.Click += new System.EventHandler(this.GreensToolStripMenuItem_Click);
+            // 
+            // bluesToolStripMenuItem
+            // 
+            this.bluesToolStripMenuItem.Name = "bluesToolStripMenuItem";
+            this.bluesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bluesToolStripMenuItem.Text = "Blues";
+            this.bluesToolStripMenuItem.Click += new System.EventHandler(this.BluesToolStripMenuItem_Click);
+            // 
             // SpectrogramViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ContextMenuStrip = this.rightClickMenu;
             this.Controls.Add(this.panelLevel);
             this.Controls.Add(this.panelSpec);
             this.Name = "SpectrogramViewer";
@@ -102,6 +225,7 @@
             this.panelSpec.ResumeLayout(false);
             this.panelLevel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLevelMask)).EndInit();
+            this.rightClickMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -113,5 +237,19 @@
         private System.Windows.Forms.Panel panelSpec;
         private System.Windows.Forms.Panel panelLevel;
         private System.Windows.Forms.PictureBox pbLevelMask;
+        private System.Windows.Forms.ContextMenuStrip rightClickMenu;
+        private System.Windows.Forms.ToolStripMenuItem brightnessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frequencyRangeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem audioDeviceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fFTSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showTicksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem colormapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viridisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grayscaleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem greensToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bluesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

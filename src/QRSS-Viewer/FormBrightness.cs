@@ -12,23 +12,41 @@ namespace QRSS_Viewer
 {
     public partial class FormBrightness : Form
     {
-        readonly Spectrogram.Settings.DisplaySettings displaySettings;
+        Spectrogram.Spectrogram spec;
 
-        public FormBrightness(Spectrogram.Settings.DisplaySettings displaySettings)
+        public FormBrightness(Spectrogram.Spectrogram spec)
         {
             InitializeComponent();
-            this.displaySettings = displaySettings;
+            this.spec = spec;
         }
 
         private void FormBrightness_Load(object sender, EventArgs e)
         {
-
+            trackBrightness.Value = (int)spec.displaySettings.brightness;
         }
 
         private void FormBrightness_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
             this.Hide();
+        }
+
+        private void TrackBrightness_Scroll(object sender, EventArgs e)
+        {
+            spec.displaySettings.brightness = (float)trackBrightness.Value;
+        }
+
+        private void BtnAuto_Click(object sender, EventArgs e)
+        {
+            if (spec.latestFFT == null)
+                return;
+
+            int autoVal = (int)(255.0/spec.latestFFT.Max()*10);
+            autoVal = Math.Min(trackBrightness.Maximum, autoVal);
+            autoVal = Math.Max(trackBrightness.Minimum, autoVal);
+
+            trackBrightness.Value = autoVal;
+            TrackBrightness_Scroll(null, null);
         }
     }
 }

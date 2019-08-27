@@ -47,6 +47,7 @@
             this.trackBrightness.TabIndex = 2;
             this.trackBrightness.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.trackBrightness.Value = 10;
+            this.trackBrightness.Scroll += new System.EventHandler(this.TrackBrightness_Scroll);
             // 
             // btnAuto
             // 
@@ -58,6 +59,7 @@
             this.btnAuto.TabIndex = 1;
             this.btnAuto.Text = "Auto";
             this.btnAuto.UseVisualStyleBackColor = true;
+            this.btnAuto.Click += new System.EventHandler(this.BtnAuto_Click);
             // 
             // FormBrightness
             // 

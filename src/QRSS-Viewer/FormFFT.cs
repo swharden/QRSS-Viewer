@@ -12,18 +12,35 @@ namespace QRSS_Viewer
 {
     public partial class FormFFT : Form
     {
-        Spectrogram.Settings.FftSettings fftSettings;
+        // NOTE: changing FFT settings requires re-initializing the spec class... this should probably happen a level up
 
-        public FormFFT(Spectrogram.Settings.FftSettings fftSettings)
+        Spectrogram.Spectrogram spec;
+
+        public FormFFT(Spectrogram.Spectrogram spec)
         {
             InitializeComponent();
-            this.fftSettings = fftSettings;
+            this.spec = spec;
         }
 
         private void FormFFT_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            this.Hide();
+            Hide();
+        }
+
+        private void FormFFT_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,9 +12,6 @@ namespace QRSS_Viewer
 {
     public partial class FormMain : Form
     {
-        FormBrightness formBrightness;
-        FormFreqRange formFreqRange;
-        FormFFT formFFT;
 
         public FormMain()
         {
@@ -35,17 +32,11 @@ namespace QRSS_Viewer
             //spectrogramViewer1.Start(preLoadWavFile: "qrss.wav");
             spectrogramViewer1.Start();
 
-            spectrogramViewer1.spec.SetDisplayRange(1000, 1500);
-            spectrogramViewer1.SetIntensity(5);
-
-            formBrightness = new FormBrightness(spectrogramViewer1.spec.displaySettings);
-            formFreqRange = new FormFreqRange(spectrogramViewer1.spec.displaySettings);
-            formFFT = new FormFFT(spectrogramViewer1.spec.fftSettings);
         }
 
         private void BrightnessToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formBrightness.Show();
+            throw new NotImplementedException();
         }
 
         private void TimerInfo_Tick(object sender, EventArgs e)
@@ -62,12 +53,12 @@ namespace QRSS_Viewer
 
         private void FrequencyRangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formFreqRange.Show();
+            throw new NotImplementedException();
         }
 
         private void FFTSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formFFT.Show();
+            throw new NotImplementedException();
         }
 
         private void AboutQRSSViewerToolStripMenuItem_Click(object sender, EventArgs e)
